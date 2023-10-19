@@ -46,5 +46,23 @@ console.log(nouvellePhrase)
 let maPhraseSlice = phrase.slice(0,7)
 console.log(maPhraseSlice)
 
+// --------------------------------------------- //
+
+// les tableaux :
+
+// --------------------------------------------- //
+
+// split - méthode pour séparer une chaine de charactere en un tableau de sous-chaînes :
+// syntax : string.split(separator, limit)
+
+let maPhrase = "Salut, j'adore les pizzas et c'est mon plât préféré."
+let mots = maPhrase.split(" ")
+console.log(mots)
+
+// --------------------------------------------- //
+
+
+
+
 
 
