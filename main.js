@@ -1,18 +1,50 @@
 // Cours recap javaScript :
 
-// 1. Les variables :
+// Les variables :
 // let & const - Conteneur qui permet de stocker des informations.
 
-// 2. console.log :
+// --------------------------------------------- //
+
+// console.log :
 // nous permet d'afficher dans la console.
 
-// 3. Concaténation :
+// --------------------------------------------- //
+
+// Concaténation :
 let prenom = "Pierre"
 let nom = "Nogaro"
 let mot = "Bonjour"
 
+let phrase = mot + " " + prenom + " " + nom
+console.log(phrase)
+
+// --------------------------------------------- //
+
+// propriété length - la longueur d'un string :
+// syntax : string.length
+
+let longueur = phrase.length
+console.log(longueur)
+console.log("dans ma phrase il y'à " + longueur + " mots")
+
+// --------------------------------------------- //
+
+// replace - remplace une valeur par une autre :
+// syntax : string.replace(searchValue, newValue)
+// parameter : searchValue : valeur à chercher / newValue : nouvelle valeur
+
+let nouvellePhrase = phrase.replace("Pierre", "Jean")
+console.log(nouvellePhrase)
 
 
+// --------------------------------------------- //
+
+// slice - sert à extraire une partie d'un array ou d'un string.
+// syntax : string.slice(start, end)
+// parameter : start :  position de départ à partir de l'index 0 / end : position finale
+
+let maPhraseSlice = phrase.slice(0,7)
+console.log(maPhraseSlice)
 
 
 
