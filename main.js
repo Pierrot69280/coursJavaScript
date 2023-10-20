@@ -25,7 +25,7 @@ console.log(phrase)
 
 let longueur = phrase.length
 console.log(longueur)
-console.log("dans ma phrase il y'à " + longueur + " mots")
+console.log("dans ma phrase il y'à " + longueur + " mots") // 21
 
 // --------------------------------------------- //
 
@@ -61,8 +61,44 @@ console.log(mots)
 
 // --------------------------------------------- //
 
+// join - élément qui s'ajoute entre chaque élément de notre tableau
+// syntax : array.join(separator)
+
+let join = ["Salut", "je", "m'appelle", "Pierre", "Nogaro"]
+let text = join.join(" and ")
+console.log(text)
+
+// --------------------------------------------- //
+
+// accéder à un élément du DOM avec document.querySelector() :
+
+const maDivCoucou = document.querySelector(".coucou")
+
+// --------------------------------------------- //
+
+// Exercice :
+// Trouver un moyen de vérifier si l'utilisateur n'a pas utilisé le mot quiche
+// Si c'est le cas, je n'accepte pas sa phrase et je la remplace par :
+// Un message d'erreur.
+
+// Je récupère mes éléments :
+const maBoiteAChoucroute = document.querySelector('.boiteChoucroute')
+const monChampText = document.querySelector('.message')
+const monBouton = document.querySelector('.monBouton')
 
 
 
+monBouton.addEventListener("click", () =>{
+
+    let laPhraseQueJAffiche = monChampText.value
+    // value : obtenir ou définir la valeur d'un élément de formulaire HTML
+
+    let lesMots = laPhraseQueJAffiche.split (" ")
+    let laPhraseErreur = "désolé, la quiche est un plât interdit !"
+
+    if (lesMots.includes("quiche")) {laPhraseQueJAffiche = laPhraseErreur}
+
+    maBoiteAChoucroute.innerHTML += ("<p>"+laPhraseQueJAffiche+"</p>")
+})
 
 
